@@ -2,17 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- Varsinainen stylesheet -->
+    <!-- Nopea css, voidaan korvata takaisin milligram -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+
+    <!-- Varsinainen stylesheet
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" integrity="sha512-xiunq9hpKsIcz42zt0o2vCo34xV0j6Ny8hgEylN3XBglZDtTZ2nwnqF/Z/TTCc18sGdvCjbFInNd++6q3J0N6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Hauska osoitin -->
+    -->
+    <!-- Hauska osoitin
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nes.css/2.3.0/css/nes.min.css" integrity="sha512-LVdzC5GAu4VEEGcarpj2jruxNUONmGEMdcc6AL7a7nSHR7QAmyLfx3SUPCSSFsNZPuZLQInrUSkqWYHpyOYeRg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    -->
+    
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>{% block title %}{% endblock %}</title>
   </head>
-  <body style="background-color: #c4b9ae; color: #1b0b1b">
+  <body>
       <center> 
     {% block body %}{% endblock %}
       </center>

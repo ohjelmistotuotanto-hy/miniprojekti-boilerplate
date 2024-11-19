@@ -6,29 +6,21 @@ Todo app
 
 {% block body %}
 
-<h2>Todo app</h2>
+<h1>Kirjat</h1>
+    
+{% if books %}
+    <ul>
+    {% for book in books %}
+        <li>
+            {{ book[1] }} {{ book[2] }} {{ book[3] }} {{ book[4] }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Ei kirjoja tietokannassa.</p>
+{% endif %}
 
-<div>
-  things still unfinished: {{ unfinished }}
-</div>
+<p><a href="/new_book">Lisää uusi kirja</a></p>
 
-<ul>
-  {% for todo in todos %}
-    <li style="display: flex">
-      <div>
-        {{ todo }} 
-      </div>
-      {% if not todo.done %}
-        <form action="/toggle_todo/{{ todo.id }}" method="post" style="margin-left: 10px;">
-          <button type="submit">mark as done</button>
-        </form>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
-
-<div>
-  <a href="/new_todo">Create new todo</a>
-</div>
 
 {% endblock %}
