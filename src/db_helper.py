@@ -31,6 +31,7 @@ def setup_db():
     db.session.execute(sql)
     db.session.commit()
 
+# VARCHAR(100) laittaa maksimi pituuden ja NOT NULL kieltää sen olemast tyhjä
   print(f"Creating table {table_name}")
   sql = text(
       f"CREATE TABLE {table_name} ("
