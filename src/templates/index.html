@@ -9,18 +9,30 @@ Viite sovellus
 <h1>Kirjat</h1>
     
 {% if books %}
-    <ul>
-    {% for book in books %}
-        <li>
-            {{ book[1] }} {{ book[2] }} {{ book[3] }} {{ book[4] }}
-        </li>
-    {% endfor %}
-    </ul>
+    <table>
+        <head>
+            <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Publisher</th>
+                <th>Year</th>
+            </tr>
+        </head>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book[1] }}</td>
+                <td>{{ book[2] }}</td>
+                <td>{{ book[3] }}</td>
+                <td>{{ book[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% else %}
     <p>Ei kirjoja tietokannassa.</p>
 {% endif %}
 
 <p><a href="/new_book">Lisää uusi kirja</a></p>
-
 
 {% endblock %}
