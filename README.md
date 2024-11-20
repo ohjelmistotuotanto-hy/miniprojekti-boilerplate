@@ -1,6 +1,8 @@
 ## Ohtu miniprojekti viitesovellus
 
-[Projektin Backlog](https://docs.google.com/spreadsheets/d/18hvBnpqpfrvLp4IAaIMx_yBNn7XAfu3UsJ9Jm_BIFVE/edit?usp=sharing)
+[Projektin Backlog](https://github.com/orgs/SoftaSankarit/projects)
+
+[Työaikakirjanpito](https://docs.google.com/spreadsheets/d/1HUKBMod-LS23XXH-n89fmx3qXItWrgfJhurG-o4Alno/edit?usp=sharing)
 
 [![GHA workflow badge](https://github.com/SoftaSankarit/miniprojekti-boilerplate/workflows/CI/badge.svg)](https://github.com/SoftaSankarit/miniprojekti-boilerplate/actions)
 
