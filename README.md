@@ -4,6 +4,8 @@
 
 [![GHA workflow badge](https://github.com/SoftaSankarit/miniprojekti-boilerplate/workflows/CI/badge.svg)](https://github.com/SoftaSankarit/miniprojekti-boilerplate/actions)
 
+### Definition of Done
+"Vaatimus on analysoitu, suunniteltu, ohjelmoitu, testattu, testaus automatisoitu, dokumentoitu, integroitu muuhun ohjelmistoon ja viety tuotantoympäristöön."
 
 ### Ohjelman asennus- ja käyttöohje
 
@@ -13,7 +15,7 @@ Kloonaa seuraava repositorio koneellesi:
 ```
 git clone https://github.com/SoftaSankarit/miniprojekti-boilerplate.git
 ```
-Luo .env-tiedosto Luo juurihakemistoon .env-tiedosto ja määritä sen sisältö seuraavasti:
+Luo juurihakemistoon .env-tiedosto ja määritä sen sisältö seuraavasti:
 ```
 DATABASE_URL=<database-local-address>
 TEST_ENV=true
