@@ -1,11 +1,10 @@
-class Book:
+from config import db
 
-    def __init__(self, id, author, title, publisher, year):
-        self.id = id
-        self.author = author
-        self.title = title
-        self.publisher = publisher
-        self.year = year
 
-    def __str__(self):
-        pass
+class Book(db.Model):
+    __tablename__ = "books"
+    id = db.Column(db.Integer, primary_key=True)
+    author = db.Column(db.String(100), nullable=False)
+    title = db.Column(db.String(100), nullable=False)
+    publisher = db.Column(db.String(100), nullable=False)
+    year = db.Column(db.Integer, nullable=False)

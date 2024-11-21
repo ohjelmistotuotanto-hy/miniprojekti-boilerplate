@@ -1,17 +1,18 @@
 from sqlalchemy import text
 from config import db
-
+from entities.book import Book
 
 # Hakee kaikki kirjat ja niiden tiedot
 def get_books():
-    sql = text("SELECT id, author, title, publisher, year FROM books")
-    result = db.session.execute(sql)
-    all_books = result.fetchall()
+    all_books = Book.query.all()
     return all_books
 
 # Luo uuden kirjan
 def create_book(author, title, publisher, year):
-    sql = text("INSERT INTO books (author, title, publisher, year) VALUES (:author, :title, :publisher, :year)")
-    db.session.execute(sql, {"author":author, "title":title, "publisher":publisher, "year":year})
+    new_book = Book(author=author,
+                    title=title,
+                    publisher=publisher,
+                    year=year) 
+    db.session.add(new_book)
     db.session.commit()
 
