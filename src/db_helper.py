@@ -1,35 +1,39 @@
 from config import db, app
 from sqlalchemy import text
 
-def table_exists():
-  sql_table_existence = text(
-    "SELECT EXISTS ("
-    "  SELECT 1"
-    "  FROM information_schema.tables"
-    f" WHERE table_name = 'todos'"
-    ")"
-  )
-
-  print(f"Checking if table todos exists")
-  print(sql_table_existence)
-
-  result = db.session.execute(sql_table_existence)
-  return result.fetchall()[0][0]
-
 def reset_db():
   print(f"Clearing contents from table todos")
   sql = text(f"DELETE FROM todos")
   db.session.execute(sql)
   db.session.commit()
 
+def tables():
+  """Returns all table names from the database except those ending with _id_seq"""
+  sql = text(
+    "SELECT table_name "
+    "FROM information_schema.tables "
+    "WHERE table_schema = 'public' "
+    "AND table_name NOT LIKE '%_id_seq'"
+  )
+  
+  result = db.session.execute(sql)
+  table_names = [row[0] for row in result.fetchall()]
+  return table_names
+
 def setup_db():
-  if table_exists():
-    print(f"Table todos exists, dropping")
-    sql = text(f"DROP TABLE todos")
-    db.session.execute(sql)
+  """
+    Creating the database
+    If database tables already exist, those are removed
+  """
+  tables_in_db = tables()
+  if len(tables_in_db) > 0:
+    print(f"Tables exist, dropping: {', '.join(tables_in_db)}")
+    for table in tables_in_db:
+      sql = text(f"DROP TABLE {table}")
+      db.session.execute(sql)
     db.session.commit()
 
-  print(f"Creating table")
+  print(f"Creating tables")
   
   # Read schema from schema.sql file
   import os
