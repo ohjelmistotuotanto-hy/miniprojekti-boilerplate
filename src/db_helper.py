@@ -1,5 +1,6 @@
 from config import db, app
 from sqlalchemy import text
+import os
 
 def reset_db():
   print(f"Clearing contents from table todos")
@@ -17,13 +18,12 @@ def tables():
   )
   
   result = db.session.execute(sql)
-  table_names = [row[0] for row in result.fetchall()]
-  return table_names
+  return [row[0] for row in result.fetchall()]
 
 def setup_db():
   """
     Creating the database
-    If database tables already exist, those are removed
+    If database tables already exist, those are dropped before the creation
   """
   tables_in_db = tables()
   if len(tables_in_db) > 0:
@@ -33,10 +33,9 @@ def setup_db():
       db.session.execute(sql)
     db.session.commit()
 
-  print(f"Creating tables")
+  print("Creating database")
   
   # Read schema from schema.sql file
-  import os
   schema_path = os.path.join(os.path.dirname(__file__), 'schema.sql')
   with open(schema_path, 'r') as f:
     schema_sql = f.read().strip()
