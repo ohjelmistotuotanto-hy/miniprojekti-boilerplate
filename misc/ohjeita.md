@@ -3,7 +3,7 @@
 Ihmisten välinen yhteistyö on suurin haaste ohjelmistojen kehittämiseen, ja erityisen haastavaa se on projektin alussa. Seuraavassa muutama vihje/checklist projektin käynnistämiseen.
 
 - [ ] tehkää esittäytymiskierros
-- [ ] luokaa jokin kommunikaatiokanava, esim. Discordiin, Telegramiin, yms
+- [ ] luokaa jokin yhteinen kommunikaatiokanava, esim. Discordiin, Telegramiin, yms
 - [ ] jokainen liittyy kanavalle
 - [ ] sopikaa yhteisistä työskenteleyajoista
   - mahdollisimman monta tuntia viikossa
