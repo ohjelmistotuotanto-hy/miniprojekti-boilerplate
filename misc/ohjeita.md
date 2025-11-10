@@ -5,7 +5,7 @@ Ihmisten välinen yhteistyö on suurin haaste ohjelmistojen kehittämiseen, ja e
 - [ ] tehkää esittäytymiskierros
 - [ ] luokaa jokin yhteinen kommunikaatiokanava, esim. Discordiin, Telegramiin, yms
 - [ ] jokainen liittyy kanavalle
-- [ ] sopikaa yhteisistä työskenteleyajoista
+- [ ] sopikaa yhteisistä työskentelyajoista
   - mahdollisimman monta tuntia viikossa
   - mielellään kampuksella paikan päällä, mutta jos se ei onnistu niin esim Discordin äänikanavalla
 - [ ] luokaa projektillenne GitHub-repositorio
