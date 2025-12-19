@@ -18,6 +18,6 @@ Ihmisten välinen yhteistyö on suurin haaste ohjelmistojen kehittämiseen, ja e
   - määritelkää definition of done
   - miettikää miten käytätte brancheja
 - [ ] lisätkää Robot-testi, joka testaa että sovelluksen etusivu toimii, ja määritelkää GitHub Action, joka suorittaa testin
-  - tähänkin voi vastuulliseksi valita esim kaksi ryhmäläistä
+  - vastuulliseksi voi valita jälleen esim. kaksi ryhmäläistä
 - [ ] Luokaa projektille tietokanta, ks ohje [täältä](https://ohjelmistotuotanto-hy.github.io/flask/#sovelluksen-k%C3%A4ynnist%C3%A4minen)
-  - tähänkin voi vastuulliseksi valita esim kaksi ryhmäläistä
+  - vastuulliseksi voi valita esim. kaksi ryhmäläistä
