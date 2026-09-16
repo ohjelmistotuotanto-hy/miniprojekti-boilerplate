@@ -3,12 +3,12 @@
 echo "Running tests"
 
 # luodaan tietokanta
-poetry run python src/db_helper.py
+uv run python src/db_helper.py
 
 echo "DB setup done"
 
 # käynnistetään Flask-palvelin taustalle
-poetry run python3 src/index.py &
+uv run python3 src/index.py &
 
 echo "started Flask server"
 
@@ -20,7 +20,7 @@ done
 echo "Flask server is ready"
 
 # suoritetaan testit
-poetry run robot --variable HEADLESS:true src/story_tests
+uv run robot --variable HEADLESS:true src/story_tests
 
 status=$?
 

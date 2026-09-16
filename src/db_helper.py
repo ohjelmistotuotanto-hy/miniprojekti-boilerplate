@@ -9,14 +9,12 @@ def reset_db():
   db.session.commit()
 
 def tables():
-  """Returns all table names from the database except those ending with _id_seq"""
+  """Returns all table names from the database"""
   sql = text(
-    "SELECT table_name "
-    "FROM information_schema.tables "
-    "WHERE table_schema = 'public' "
-    "AND table_name NOT LIKE '%_id_seq'"
+    "SELECT name FROM sqlite_master "
+    "WHERE type = 'table' AND name NOT LIKE 'sqlite_%'"
   )
-  
+
   result = db.session.execute(sql)
   return [row[0] for row in result.fetchall()]
 
