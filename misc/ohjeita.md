@@ -19,5 +19,14 @@ Ihmisten välinen yhteistyö on suurin haaste ohjelmistojen kehittämiseen, ja e
   - miettikää miten käytätte brancheja
 - [ ] lisätkää Robot-testi, joka testaa että sovelluksen etusivu toimii, ja määritelkää GitHub Action, joka suorittaa testin
   - vastuulliseksi voi valita jälleen esim. kaksi ryhmäläistä
-- [ ] Luokaa projektille tietokanta, ks ohje [täältä](https://ohjelmistotuotanto-hy.github.io/flask/#sovelluksen-k%C3%A4ynnist%C3%A4minen)
+- [ ] Ota projektin tietokanta käyttöön
+  - sovellus käyttää SQLitea, joka ei vaadi erillisen tietokantapalvelimen asentamista tai käynnistämistä, vaan tietokanta on yksittäinen tiedosto
+  - luo projektin juureen `.env`-tiedosto, jossa määritellään ainakin seuraavat muuttujat:
+    ```
+    DATABASE_URL=sqlite:///database.db
+    SECRET_KEY=jokinsalaisuus
+    ```
+  - aja komento `uv run python src/db_helper.py`, joka luo tietokantaan [src/schema.sql](../src/schema.sql):ssa määritellyt taulut
+    - komento voidaan ajaa uudelleen aina kun taulujen rakennetta muutetaan, sillä se pudottaa olemassa olevat taulut ennen uusien luomista
+  - tietokantatiedostoa (esim. `database.db`) ei lisätä versionhallintaan
   - vastuulliseksi voi valita esim. kaksi ryhmäläistä
