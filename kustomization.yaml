@@ -1,0 +1,34 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ohtuprojekti-staging
+
+labels:
+  - pairs:
+      app: miniprojekti
+    includeSelectors: true
+
+resources:
+  - manifests_openshift/configmap.yaml
+  - manifests_openshift/imagestream.yaml
+  - manifests_openshift/service.yaml
+  - manifests_openshift/route.yaml
+  - manifests_openshift/volumeclaim.yaml
+  - manifests_openshift/deployment.yaml
+
+configurations:
+  - manifests_openshift/kustomizeconfig.yaml
+
+images:
+  - name: dockerhub-image
+    newName: mluukkai/ohtu-boilerplate
+    newTag: latest
+
+patches:
+  - target:
+      kind: Route
+      name: route
+    patch: |-
+      - op: add
+        path: /spec/host
+        value: miniprojekti-ohtuprojekti-staging.ext.ocp-test-0.k8s.it.helsinki.fi
