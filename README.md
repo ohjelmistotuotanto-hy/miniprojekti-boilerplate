@@ -6,9 +6,14 @@ Muutamia vihjeitä projektin alkuun [täällä](https://github.com/ohjelmistotuo
 
 ### Sovelluksen vieminen OKD-klusterille
 
-Oletuksena on, että olet jo kirjautunut `oc`-komentorivityökalulla oikeaan OKD-klusteriin ja oikeaan projektiin (`oc project <namespace>`).
+Oletuksena on, että
 
-Ennen ensimmäistä deployausta eli klusterillevientiä muokkaa tiedostoon `kustomization.yaml` seuraavat kohdat omaan projektiin sopiviksi:
+- olet jo kirjautunut `oc`-komentorivityökalulla oikeaan OKD-klusteriin ja oikeaan projektiin (`oc project <namespace>`).
+- projekti on pushattu onnistuneesti GitHubiin ja siitä on muodostunut Docker-kuva, joka on julkinen. Varmista tämä GitHubista, repositorion Packages-välilehdeltä (Package settings → Change visibility → Public):
+
+![](misc/package.png)
+
+Ennen ensimmäistä klusterillevientiä eli deployausta muokkaa tiedostoon `kustomization.yaml` seuraavat kohdat omaan projektiin sopiviksi:
 
 - `namespace` — OKD-projekti, johon sovellus deployataan.
 - `images.newName` — oman Docker-imagen osoite, johon GitHub Actions -workflow pushaa buildatun imagen. GitHub action luo repositorin nimen automaattisesti, joten osoite on muotoa `ghcr.io/<käyttäjätunnus>/<repo-nimi>`.
