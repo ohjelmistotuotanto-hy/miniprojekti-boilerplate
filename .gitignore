@@ -10,3 +10,4 @@ report.html
 *.png
 possu.sh
 manifests_openshift/configmap.yaml
+secret.env

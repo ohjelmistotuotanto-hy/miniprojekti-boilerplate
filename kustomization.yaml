@@ -13,8 +13,8 @@ resources:
 
 secretGenerator:
   - name: secret
-    literals:
-      - SECRET_KEY=4ae7024ff8a800054516452b4a58e52fcc450d8538f9e4532b14a1199ea49ef6
+    envs:
+      - secret.env
 
 configurations:
   - manifests/kustomizeconfig.yaml
