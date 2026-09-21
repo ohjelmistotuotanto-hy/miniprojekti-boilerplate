@@ -35,6 +35,6 @@ Sovellus deployataan (tai päivitetään) klusterille [Kustomize](https://kustom
 oc apply -k .
 ```
 
-Komento luo/päivittää kaikki `kustomization.yaml`-tiedostossa määritellyt resurssit kubernetes-resurssit OKD-klusterille.
+Komento luo/päivittää kaikki `kustomization.yaml`-tiedostossa määritellyt Kubernetes-resurssit OKD-klusterille.
 
-Jos kaikki menee hyvin, käynnistyy sovellus osoitteeseen http://route-<projekti>.ext.okd-cs-test-0.k8s.cs.helsinki.fi`
+Jos kaikki menee hyvin, käynnistyy sovellus osoitteeseen http://route-<projekti>.ext.okd-cs-test-0.k8s.cs.helsinki.fi
