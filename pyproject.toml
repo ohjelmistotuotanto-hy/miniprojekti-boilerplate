@@ -18,7 +18,8 @@ dependencies = [
 [dependency-groups]
 dev = [
     "robotframework (>=7.3.2,<8.0.0)",
-    "robotframework-seleniumlibrary (>=6.8.0,<7.0.0)",
+    "robotframework-browser (>=20.5.0)",
+    "robotframework-browser-batteries (>=20.5.0)",
     "pytest (>=8.4.2,<9.0.0)"
 ]
 

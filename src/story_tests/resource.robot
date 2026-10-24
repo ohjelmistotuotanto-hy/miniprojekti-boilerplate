@@ -1,31 +1,23 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library  Browser
 
 *** Variables ***
 ${SERVER}     localhost:5001
-${DELAY}      0.5 seconds
+${DELAY}      500ms
 ${HOME_URL}   http://${SERVER}
 ${RESET_URL}  http://${SERVER}/reset_db
-${BROWSER}    chrome
+${BROWSER}    chromium
 ${HEADLESS}   false
 
 *** Keywords ***
 Open And Configure Browser
-    IF  $BROWSER == 'chrome'
-        ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
-        Call Method  ${options}  add_argument  --incognito
-    ELSE IF  $BROWSER == 'firefox'
-        ${options}  Evaluate  sys.modules['selenium.webdriver'].FirefoxOptions()  sys
-        Call Method  ${options}  add_argument  --private-window
-    END
     IF  $HEADLESS == 'true'
-        Set Selenium Speed  0.01 seconds
-        Call Method  ${options}  add_argument  --headless
+        New Browser  browser=${BROWSER}  headless=True
     ELSE
-        Set Selenium Speed  ${DELAY}
+        New Browser  browser=${BROWSER}  headless=False  slowMo=${DELAY}
     END
-    Open Browser  browser=${BROWSER}  options=${options}
+    New Context
+    New Page  about:blank
 
 Reset Todos
     Go To  ${RESET_URL}
-
