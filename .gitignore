@@ -10,4 +10,5 @@ report.html
 *.png
 !misc/*.png
 possu.sh
-secret.envplaywright-log.txt
+secret.env
+playwright-log.txt
