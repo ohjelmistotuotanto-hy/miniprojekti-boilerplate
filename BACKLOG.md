@@ -4,7 +4,8 @@ Tähän repositorioon on tehty esimerkkinä backlogit boilerplaten todo-sovelluk
 
 ### Linkit
 
-- [GitHub Project](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1)
+- [Tyhjä backlog-pohja](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2), jonka voi kopioida omaksi projektiksi (ks. [pikalähtö](#pikalähtö-kopioi-valmis-pohja))
+- [Esimerkkiprojekti](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1)
   - [Product backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/1): kaikki user storyt prioriteettijärjestyksessä
   - [Sprint 1 backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/2): valmis sprintti, kaikki taskit Done-tilassa
   - [Sprint 2 backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/3): käynnissä oleva sprintti
@@ -33,6 +34,25 @@ Tähän repositorioon on tehty esimerkkinä backlogit boilerplaten todo-sovelluk
 
 - sprintin 1 storyissa hyväksymiskriteerit on kirjattu issueen tekstinä, esim. [#8](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues/8)
 - sprintistä 2 alkaen hyväksymiskriteerit kirjoitetaan Robot Framework -testeiksi, ja issuessa on linkki testitiedostoon, esim. [#17](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues/17) → [todos.robot](src/story_tests/todos.robot)
+
+### Pikalähtö: kopioi valmis pohja
+
+Valmis tyhjä pohja on [Miniprojekti – backlog-template](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2). Siinä on valmiina:
+
+- kentät _Sprint_ (Sprint 1–4) ja _Tyyppi_ (User story / Task)
+- näkymät _Product backlog_ ja _Sprint 1–4 backlog_
+- burnup-kaaviot _Sprint 1–4 burnup_
+
+Pohjan käyttöönotto:
+
+1. Avaa [pohja](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2) ja valitse oikean yläkulman _..._ → _Make a copy_.
+2. Valitse omistajaksi ryhmän repositorion omistaja (käyttäjä tai organisaatio) ja anna projektille nimi. Kopioon tulevat kentät, näkymät ja kaaviot, mutta ei sisältöä.
+3. Vaihda kopion asetuksista (_..._ → _Settings_) _Visibility_ arvoon _Public_.
+4. Linkitä projekti ryhmän repositorioon: repositorion _Projects_-välilehti → _Link a project_.
+5. Laita projektin _Workflows_-asetuksista päälle _Auto-add to project_ ryhmän repositoriolle, niin uudet issuet tulevat projektiin automaattisesti.
+6. Kirjatkaa storyt ja taskit issueina ja asettakaa niille projektissa kentät _Tyyppi_ ja _Sprint_. Näkymät ja kaaviot suodattavat _Tyyppi_-kentän perusteella, joten labeleita ei tarvita.
+
+Alla oleva ohje kertoo, miten sama rakennetaan alusta asti itse. Sitä kannattaa lukea myös pohjaa käyttäessä, sillä siinä selitetään, mitä kukin osa tekee.
 
 ### Ohje: näin teette backlogit omalle projektillenne
 
