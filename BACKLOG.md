@@ -4,7 +4,7 @@ Tähän repositorioon on tehty esimerkkinä backlogit boilerplaten todo-sovelluk
 
 ### Linkit
 
-- [Tyhjä backlog-pohja](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2), jonka voi kopioida omaksi projektiksi (ks. [pikalähtö](#pikalähtö-kopioi-valmis-pohja))
+- [Tyhjä backlog-pohja](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2), jonka voi kopioida omaksi projektiksi (ks. [käyttöönotto](#valmis-pohja-kopioi-ja-ota-käyttöön))
 - [Esimerkkiprojekti](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1)
   - [Product backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/1): kaikki user storyt prioriteettijärjestyksessä
   - [Sprint 1 backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/2): valmis sprintti, kaikki taskit Done-tilassa
@@ -35,7 +35,7 @@ Tähän repositorioon on tehty esimerkkinä backlogit boilerplaten todo-sovelluk
 - sprintin 1 storyissa hyväksymiskriteerit on kirjattu issueen tekstinä, esim. [#8](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues/8)
 - sprintistä 2 alkaen hyväksymiskriteerit kirjoitetaan Robot Framework -testeiksi, ja issuessa on linkki testitiedostoon, esim. [#17](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues/17) → [todos.robot](src/story_tests/todos.robot)
 
-### Pikalähtö: kopioi valmis pohja
+### Valmis pohja: kopioi ja ota käyttöön
 
 Valmis tyhjä pohja on [Miniprojekti – backlog-template](https://github.com/orgs/ohjelmistotuotanto-hy/projects/2). Siinä on valmiina:
 
