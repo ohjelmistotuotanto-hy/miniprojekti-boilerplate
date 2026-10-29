@@ -8,7 +8,7 @@ Tähän repositorioon on tehty esimerkkinä backlogit boilerplaten todo-sovelluk
   - [Product backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/1): kaikki user storyt prioriteettijärjestyksessä
   - [Sprint 1 backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/2): valmis sprintti, kaikki taskit Done-tilassa
   - [Sprint 2 backlog](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/views/3): käynnissä oleva sprintti
-  - [Sprint 1 burnup](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/insights/3) ja [Sprint 2 burnup](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/insights/4): sprinttikohtaiset burnup-kaaviot
+  - [Sprint 1 burnup](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/insights/3) ja [Sprint 2 burnup](https://github.com/orgs/ohjelmistotuotanto-hy/projects/1/insights/4): sprinttikohtaiset burnup-kaaviot (ks. [miksi kaaviot näyttävät oudoilta](#miksi-esimerkin-burnup-kaaviot-näyttävät-oudoilta))
 - [Issuet](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues?q=is%3Aissue): jokainen user story ja taski on oma issuensa
   - [User storyt](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues?q=is%3Aissue+label%3A%22user+story%22)
   - [Taskit](https://github.com/ohjelmistotuotanto-hy/miniprojekti-boilerplate/issues?q=is%3Aissue+label%3Atask)
@@ -92,7 +92,20 @@ GitHub Projects piirtää burnup-kaavion valmiiksi suljettujen issueiden peruste
 
 Kaavio näyttää ajan funktiona, kuinka monta taskia sprintissä on kaikkiaan ja kuinka moni niistä on valmis. Kun taskeja suljetaan pitkin sprinttiä, valmiiden käyrä nousee kohti kokonaismäärää. Jos käyrä pysyy pitkään tasaisena ja nousee vasta sprintin lopussa, taskit ovat todennäköisesti liian isoja tai niitä ei suljeta sitä mukaa kuin ne valmistuvat.
 
-Kaavio perustuu issueiden avaamis- ja sulkemisajankohtiin, joten se näyttää järkevältä vain, jos taskit oikeasti suljetaan silloin, kun ne valmistuvat. Tämän esimerkkiprojektin kaavioissa kaikki tapahtuu yhtenä päivänä, koska issuet luotiin ja suljettiin kerralla.
+Kaavio perustuu issueiden avaamis- ja sulkemisajankohtiin, joten se näyttää järkevältä vain, jos taskit oikeasti suljetaan silloin, kun ne valmistuvat.
+
+##### Miksi esimerkin burnup-kaaviot näyttävät oudoilta
+
+Esimerkin kaavioissa molemmat käyrät pysyvät nollassa koko aikavälin ja nousevat aivan oikeassa reunassa yhdellä kertaa lopulliseen arvoonsa. Sprintin 1 kaaviossa kumpikin käyrä nousee 16:een, sprintin 2 kaaviossa kokonaismäärä nousee 13:een ja valmiiden määrä 6:een.
+
+Syy on se, että esimerkkiprojektin kaikki issuet luotiin skriptillä muutaman minuutin aikana 29.10.2026, ja valmiiksi merkityt taskit suljettiin heti luomisen jälkeen. GitHubin näkökulmasta kummankin sprintin kaikki taskit siis syntyivät ja valmistuivat samana päivänä, eikä kaaviolla ole mitään historiaa näytettävänä. Sprint-kentän arvolla ei ole vaikutusta siihen, mihin ajankohtaan taski kaaviossa sijoittuu.
+
+Oikeassa projektissa kaavio näyttäisi toiselta:
+
+- kokonaismäärän käyrä nousee sprintin suunnittelussa, kun taskit luodaan, ja myöhemmin pienin askelin, jos taskeja lisätään kesken sprintin
+- valmiiden käyrä nousee portaittain sitä mukaa kuin taskeja suljetaan
+- sprintin lopussa käyrät ovat lähellä toisiaan, jos sprinttiin valitut taskit saatiin valmiiksi
+- käyrien välinen ero kertoo milloin tahansa, paljonko työtä on vielä jäljellä
 
 #### 8. Linkitä backlogit README:hen
 
