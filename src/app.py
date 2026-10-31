@@ -31,7 +31,7 @@ def toggle_todo(todo_id):
     set_done(todo_id)
     return redirect("/")
 
-@app.route("/delete_todo/<todo_id>")
+@app.route("/delete_todo/<todo_id>", methods=["POST"])
 def remove_todo(todo_id):
     delete_todo(todo_id)
     return redirect("/")

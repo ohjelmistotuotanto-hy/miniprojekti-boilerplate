@@ -18,7 +18,9 @@ body %}
       <button type="submit">mark as done</button>
     </form>
     {% endif %}
-    <a href="/delete_todo/{{ todo.id }}" style="margin-left: 10px">delete</a>
+    <form action="/delete_todo/{{ todo.id }}" method="post" style="margin-left: 10px">
+      <button type="submit">delete</button>
+    </form>
   </li>
   {% endfor %}
 </ul>
