@@ -17,3 +17,8 @@ def create_todo(content):
     sql = text("INSERT INTO todos (content) VALUES (:content)")
     db.session.execute(sql, { "content": content })
     db.session.commit()
+
+def delete_todo(todo_id):
+    sql = text("DELETE FROM todos WHERE id = :id")
+    db.session.execute(sql, { "id": todo_id })
+    db.session.commit()
