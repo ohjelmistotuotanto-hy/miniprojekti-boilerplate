@@ -29,3 +29,12 @@ After adding two todos and marking one done, there is one unfinished
     Click  //li[div[contains(text(), 'Buy milk')]]/form/button
     Get Text  body  *=  things still unfinished: 1
     Get Text  body  *=  Buy milk, done
+
+After adding a todo and deleting it, there are no todos
+    Go To  ${HOME_URL}
+    Click  text=Create new todo
+    Fill Text  [name="content"]  Buy milk
+    Click  button >> text=Create
+    Click  //li[div[contains(text(), 'Buy milk')]]//button[text()='delete']
+    Get Text  body  *=  things still unfinished: 0
+    Get Text  body  not contains  Buy milk

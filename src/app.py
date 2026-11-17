@@ -1,6 +1,6 @@
 from flask import redirect, render_template, request, jsonify, flash
 from db_helper import reset_db
-from repositories.todo_repository import get_todos, create_todo, set_done
+from repositories.todo_repository import get_todos, create_todo, set_done, delete_todo
 from config import app, test_env
 from util import validate_todo
 
@@ -29,6 +29,11 @@ def todo_creation():
 @app.route("/toggle_todo/<todo_id>", methods=["POST"])
 def toggle_todo(todo_id):
     set_done(todo_id)
+    return redirect("/")
+
+@app.route("/delete_todo/<todo_id>", methods=["POST"])
+def remove_todo(todo_id):
+    delete_todo(todo_id)
     return redirect("/")
 
 # testausta varten oleva reitti
