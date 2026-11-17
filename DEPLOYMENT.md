@@ -39,7 +39,7 @@ Komento luo/päivittää kaikki `kustomization.yaml`-tiedostossa määritellyt K
 
 Kun sovellus on käynnistynyt (tilanteen näkee komennolla `oc get pods`), luo vielä tietokannan taulut klusterille ohjeen [Tietokanta klusterilla](#tietokanta-klusterilla) mukaan.
 
-Jos kaikki menee hyvin, käynnistyy sovellus osoitteeseen https://route-<projekti>.ext.okd-cs-test-0.k8s.cs.helsinki.fi
+Jos kaikki menee hyvin, käynnistyy sovellus osoitteeseen `https://route-<projekti>.ext.okd-cs-test-0.k8s.cs.helsinki.fi`
 
 ### Automaattinen päivittyminen
 
